@@ -24,7 +24,12 @@
 #### 1.4 create `docker-compose.yml` file
 
 #### 1.5 build and run
-
+```sh
+docker-compose up
+# to stop
+docker-compose stop # or
+docker-compose down # delete
+```
 
 ### 2. Optimize docker image, spec for python:3.7-alpine -> volving/python:3.7-alpine-gcc -> volving/python:3.7-alpine-gcc-flask-redis
 
@@ -54,5 +59,8 @@ docker push
 
 #### 2.3 use `volving/python:3.7-alpine-gcc-flask-redis` in `docker-compose.yml`
 
+```sh
+docker-compose up
+```
 
 ### 3. try other commands

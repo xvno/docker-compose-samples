@@ -5,8 +5,18 @@
 
 
 # 2.2
-FROM volving/python:3.7-alpine-gcc
+# FROM volving/python:3.7-alpine-gcc
 
-WORKDIR /code
-COPY . .
-RUN pip install -r requirements.txt
+# WORKDIR /code
+# COPY requirements.txt requirements.txt
+# RUN pip install -r requirements.txt
+
+# 2.3
+FROM volving/python:3.7-alpine-gcc-flask-redis
+
+ENV FLASK_APP=app.py
+ENV FLASK_RUN_HOST=0.0.0.0
+EXPOSE 5000
+
+VOLUME ["/code"]
+CMD ["flask", "run"]
