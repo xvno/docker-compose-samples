@@ -64,3 +64,16 @@ docker-compose up
 ```
 
 ### 3. try other commands
+
+#### Frequently Used Commands
+
+- `up`: `docker-compose up` build and run a project, use `--build` to rebuild
+- `stop`: `docker-compose stop` runs in the directory with `docker-compose.yml`
+- `start`: `docker-compose start` to start the stopped project
+- `down`: stop and remove containers, add `--volumes` if volumes are to removed: `docker-compose down --volumes`
+- `-d`: to run in detached mode: `docker-compose up -d`
+- `-f`: to specify a compose file, can use multiple times.
+- `-p`: specify a certain name for the project
+- `run`: `docker-compose run <service name> <command name>` to run one-off commands for the service: `docker-compose run web env` # to run env in newly started web container
+#### others
+use `docker-compose --help` to see the **man**
