@@ -26,9 +26,22 @@
 #### 1.5 build and run
 
 
-### 2. optimize docker image, spec for python:3.7-alpine -> volving/python:3.7-alpine-gcc -> volving/python:3.7-alpine-gcc-flask-redis
+### 2. Optimize docker image, spec for python:3.7-alpine -> volving/python:3.7-alpine-gcc -> volving/python:3.7-alpine-gcc-flask-redis
 
 #### 2.1 make `volving/python:3.7-alpine-gcc`
+
+
+```sh
+docker build -t python:3.7-alpine-gcc .
+```
+
+> rename this image and push to my dockerhub repo
+
+```sh
+docker login
+docker tag python:3.7-alpine-gcc volving/python:3.7-alpine-gcc
+docker push
+```
 
 #### 2.2 make `volving/python:3.7-alpine-gcc-flask-redis`
 
