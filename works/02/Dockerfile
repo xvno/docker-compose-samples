@@ -1,3 +1,12 @@
-FROM python:3.7-alpine
+# 2.1
+# FROM python:3.7-alpine
 
-RUN apk add --no-cache gcc musl-dev linux-headers
+# RUN apk add --no-cache gcc musl-dev linux-headers
+
+
+# 2.2
+FROM volving/python:3.7-alpine-gcc
+
+WORKDIR /code
+COPY . .
+RUN pip install -r requirements.txt

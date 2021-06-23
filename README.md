@@ -45,6 +45,13 @@ docker push
 
 #### 2.2 make `volving/python:3.7-alpine-gcc-flask-redis`
 
+```sh
+docker build -t python:3.7-alpine-gcc-flask-redis .
+docker tag python:3.7-alpine-gcc-flask-redis volving/python:3.7-alpine-gcc-flask-redis
+docker push
+```
+
+
 #### 2.3 use `volving/python:3.7-alpine-gcc-flask-redis` in `docker-compose.yml`
 
 
